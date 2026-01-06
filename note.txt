@@ -251,3 +251,88 @@ The PR is finally allowed to be merged into main.
 One last tip: Make sure you scroll to the bottom and click "Save changes" or "Update" once you've checked these boxes!
 
 Would you like to know how to "Approve" a pull request once your collaborators start sending them to you?
+
+
+
+
+
+*******This covers listing, creating, switching, and deleting branches, both locally and on remote.***
+
+1️⃣ List Branches
+
+Local branches:
+
+git branch
+
+
+Remote branches:
+
+git branch -r
+
+
+All branches (local + remote):
+
+git branch -a
+
+2️⃣ Create a Branch
+
+Create a branch but stay on current branch:
+
+git branch <branch-name>
+
+
+Create and switch to the branch immediately:
+
+git checkout -b <branch-name>
+# OR with newer Git
+git switch -c <branch-name>
+
+
+✅ Example:
+
+git checkout -b feature/login
+
+3️⃣ Switch Branches
+git checkout <branch-name>
+# OR with newer Git
+git switch <branch-name>
+
+
+⚠️ You cannot switch to a branch that doesn’t exist.
+
+4️⃣ Delete a Branch
+
+Delete a local branch (if merged):
+
+git branch -d <branch-name>
+
+
+Force delete a local branch (even if not merged):
+
+git branch -D <branch-name>
+
+
+Delete a remote branch:
+
+git push origin --delete <branch-name>
+
+
+⚠️ You cannot delete the branch you’re currently on. Switch to another branch first.
+
+5️⃣ Push a New Branch to Remote
+git push -u origin <branch-name>
+
+
+-u sets upstream so future git push and git pull work automatically.
+
+6️⃣ Quick Tips
+
+Always make your first commit before creating other branches.
+
+Name branches by feature or purpose: feature/login, bugfix/navbar, hotfix/payment.
+
+Use git branch -a to see all branches before deleting or switching.
+
+If you want, I can also make a small visual diagram of Git branch workflow for TeamProject—showing main, feature branches, merges, and deletions. It makes it way easier to understand.
+
+Do you want me to make that diagram?
