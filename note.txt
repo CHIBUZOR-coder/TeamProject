@@ -336,3 +336,24 @@ Use git branch -a to see all branches before deleting or switching.
 If you want, I can also make a small visual diagram of Git branch workflow for TeamProject—showing main, feature branches, merges, and deletions. It makes it way easier to understand.
 
 Do you want me to make that diagram?
+
+
+
+main
+ │
+ │
+ ├── feature/login
+ │       │
+ │       ├── commit A
+ │       ├── commit B
+ │       │
+ │       └── (merge back to main)
+ │
+ ├── info_note
+ │       │
+ │       └── commit C
+ │
+ └── create_index
+         │
+         ├── commit D
+         └── commit E
