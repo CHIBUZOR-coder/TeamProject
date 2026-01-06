@@ -205,3 +205,49 @@ Enter main (or your default branch).
 Check Require a pull request before merging. This forces the collaborator to submit code for your approval rather than pushing directly.
 
 Would you like help setting up an organization or configuring a branch protection rule?
+
+
+
+
+
+
+Since you want to enforce a professional workflow where collaborators must use branches and pull requests (PRs), here is exactly what you should tick under the "Require a pull request before merging" section:
+
+1. Required: "Required reviews"
+Action: Set the number to 1.
+
+Why: This ensures that code doesn't just sit in a PR—someone has to look at it. If you want to be the only one who can approve, you will be the one providing this review.
+
+2. Recommended: "Dismiss stale pull request approvals..."
+Action: Tick this box.
+
+Why: If a collaborator gets an approval, but then sneaks in more (potentially broken) code to the same branch, this setting clears the old approval. They will need a new review for the new changes. This is a very important security/quality step.
+
+3. Recommended: "Require conversation resolution before merging"
+Action: Tick this box.
+
+Why: If you leave a comment/critique on their code (e.g., "Fix this variable name"), they cannot merge the PR until they have marked that conversation as "Resolved." it prevents them from ignoring your feedback.
+
+What to leave UNTICKED (for now):
+Require review from Code Owners: Leave this unticked unless you have created a special CODEOWNERS file in your repo.
+
+Require review from specific teams: Leave this unticked (this is mostly for large companies).
+
+Allowed merge methods: You can leave these as default (usually all three are checked). This just decides if the "Merge" button on GitHub uses a "Create a merge commit," "Squash," or "Rebase" style.
+
+Summary of the Workflow you are creating:
+Collaborator creates a branch and pushes changes.
+
+Collaborator opens a Pull Request on GitHub.
+
+You (or another peer) review the code and leave comments.
+
+Collaborator fixes issues until all "conversations are resolved."
+
+You give the final "Approve."
+
+The PR is finally allowed to be merged into main.
+
+One last tip: Make sure you scroll to the bottom and click "Save changes" or "Update" once you've checked these boxes!
+
+Would you like to know how to "Approve" a pull request once your collaborators start sending them to you?
