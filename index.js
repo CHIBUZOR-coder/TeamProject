@@ -9,3 +9,5 @@ console.log(quotient);
 
 let remainder = 25 % 4
 console.log(remainder);
+let exponentiation = 3 ** 3
+console.log(exponentiation);
